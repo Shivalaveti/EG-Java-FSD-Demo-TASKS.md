@@ -1,0 +1,22 @@
+TASK1:Purpose of making constructor as private?
+
+By making a constructor private, you control how instances of the class are created and ensure that certain design constraints are enforced, 
+such as restricting the number of instances, controlling instantiation through specific methods, or preventing subclassing.
+For example : UTILITY CLASSES- This class contains only static methods and constants and typically used to provide common functionality that doesnt depending on 
+maintaining state.
+
+TASK2: Can  constructor as final- and impact?
+//No, constuctors can never be declared as final, and the compiler will shows like " Modifier final not allowed".
+
+TASK3:If i keep int nearby const-what happens?
+Ans: If we keep int var nearby constructor it will be a local variable specific to that constructor and wil not be accessible outside of that constructor.
+//eg:
+// public class MyClass {
+    private int myInt; // (Instance variable)
+    
+    public MyClass(int myInt) {
+        int localVar = myInt; // (Local variable within the constructor)
+        this.myInt = localVar; // (Assigning the value of the local variable to the instance variable)
+    }
+    
+}
